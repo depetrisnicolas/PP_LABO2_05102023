@@ -42,6 +42,8 @@
             btnCerrar = new Button();
             txtSegundoOperador = new TextBox();
             txtPrimerOperador = new TextBox();
+            lstHistorial = new ListBox();
+            lblHistorial = new Label();
             grpSistema.SuspendLayout();
             SuspendLayout();
             // 
@@ -161,9 +163,9 @@
             // 
             // txtSegundoOperador
             // 
-            txtSegundoOperador.Location = new Point(373, 288);
+            txtSegundoOperador.Location = new Point(377, 288);
             txtSegundoOperador.Name = "txtSegundoOperador";
-            txtSegundoOperador.Size = new Size(170, 23);
+            txtSegundoOperador.Size = new Size(166, 23);
             txtSegundoOperador.TabIndex = 2;
             txtSegundoOperador.TextChanged += txtSegundoOperador_TextChanged;
             // 
@@ -176,11 +178,32 @@
             txtPrimerOperador.TabIndex = 0;
             txtPrimerOperador.TextChanged += txtPrimerOperador_TextChanged;
             // 
+            // lstHistorial
+            // 
+            lstHistorial.FormattingEnabled = true;
+            lstHistorial.ItemHeight = 15;
+            lstHistorial.Location = new Point(561, 123);
+            lstHistorial.Name = "lstHistorial";
+            lstHistorial.Size = new Size(266, 244);
+            lstHistorial.TabIndex = 51;
+            // 
+            // lblHistorial
+            // 
+            lblHistorial.AutoSize = true;
+            lblHistorial.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lblHistorial.Location = new Point(561, 95);
+            lblHistorial.Name = "lblHistorial";
+            lblHistorial.Size = new Size(84, 25);
+            lblHistorial.TabIndex = 52;
+            lblHistorial.Text = "Historial";
+            // 
             // FrmCalculadora
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(561, 389);
+            ClientSize = new Size(839, 389);
+            Controls.Add(lblHistorial);
+            Controls.Add(lstHistorial);
             Controls.Add(txtPrimerOperador);
             Controls.Add(txtSegundoOperador);
             Controls.Add(btnCerrar);
@@ -221,5 +244,7 @@
         private Button btnCerrar;
         private TextBox txtSegundoOperador;
         private TextBox txtPrimerOperador;
+        private ListBox lstHistorial;
+        private Label lblHistorial;
     }
 }
