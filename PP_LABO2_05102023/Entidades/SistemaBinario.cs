@@ -22,7 +22,8 @@ namespace Entidades
         {
             get
             {
-                return this.ValorNumerico;
+                double.TryParse(base.valor, out double valorAux);
+                return valorAux;
             }
         }
 

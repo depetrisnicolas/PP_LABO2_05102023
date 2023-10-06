@@ -40,8 +40,8 @@
             btnOperar = new Button();
             btnLimpiar = new Button();
             btnCerrar = new Button();
-            txtSegundoOperador = new TextBox();
-            txtPrimerOperador = new TextBox();
+            txtSegundoOperando = new TextBox();
+            txtPrimerOperando = new TextBox();
             lstHistorial = new ListBox();
             lblHistorial = new Label();
             grpSistema.SuspendLayout();
@@ -161,22 +161,22 @@
             btnCerrar.UseVisualStyleBackColor = true;
             btnCerrar.Click += btnCerrar_Click;
             // 
-            // txtSegundoOperador
+            // txtSegundoOperando
             // 
-            txtSegundoOperador.Location = new Point(377, 288);
-            txtSegundoOperador.Name = "txtSegundoOperador";
-            txtSegundoOperador.Size = new Size(166, 23);
-            txtSegundoOperador.TabIndex = 2;
-            txtSegundoOperador.TextChanged += txtSegundoOperador_TextChanged;
+            txtSegundoOperando.Location = new Point(377, 288);
+            txtSegundoOperando.Name = "txtSegundoOperando";
+            txtSegundoOperando.Size = new Size(166, 23);
+            txtSegundoOperando.TabIndex = 2;
+            txtSegundoOperando.TextChanged += txtSegundoOperador_TextChanged;
             // 
-            // txtPrimerOperador
+            // txtPrimerOperando
             // 
-            txtPrimerOperador.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            txtPrimerOperador.Location = new Point(22, 288);
-            txtPrimerOperador.Name = "txtPrimerOperador";
-            txtPrimerOperador.Size = new Size(168, 23);
-            txtPrimerOperador.TabIndex = 0;
-            txtPrimerOperador.TextChanged += txtPrimerOperador_TextChanged;
+            txtPrimerOperando.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            txtPrimerOperando.Location = new Point(22, 288);
+            txtPrimerOperando.Name = "txtPrimerOperando";
+            txtPrimerOperando.Size = new Size(168, 23);
+            txtPrimerOperando.TabIndex = 0;
+            txtPrimerOperando.TextChanged += txtPrimerOperador_TextChanged;
             // 
             // lstHistorial
             // 
@@ -204,8 +204,8 @@
             ClientSize = new Size(839, 389);
             Controls.Add(lblHistorial);
             Controls.Add(lstHistorial);
-            Controls.Add(txtPrimerOperador);
-            Controls.Add(txtSegundoOperador);
+            Controls.Add(txtPrimerOperando);
+            Controls.Add(txtSegundoOperando);
             Controls.Add(btnCerrar);
             Controls.Add(btnLimpiar);
             Controls.Add(btnOperar);
@@ -222,7 +222,7 @@
             Name = "FrmCalculadora";
             Text = "Calculadora Alumno: Nicolas Depetris";
             FormClosing += FrmCalculadora_FormClosing;
-            Load += Form1_Load;
+            Load += FrmCalculadora_Load;
             grpSistema.ResumeLayout(false);
             grpSistema.PerformLayout();
             ResumeLayout(false);
@@ -242,8 +242,8 @@
         private Button btnOperar;
         private Button btnLimpiar;
         private Button btnCerrar;
-        private TextBox txtSegundoOperador;
-        private TextBox txtPrimerOperador;
+        private TextBox txtSegundoOperando;
+        private TextBox txtPrimerOperando;
         private ListBox lstHistorial;
         private Label lblHistorial;
     }

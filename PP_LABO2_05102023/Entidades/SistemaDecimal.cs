@@ -21,11 +21,12 @@ namespace Entidades
         {
             get
             {
-                return this.ValorNumerico;
+                double.TryParse(base.valor, out double valorAux);
+                return valorAux;
             }
         }
 
-        //METODOS - !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        //METODOS 
         public override Numeracion CambiarSistemaDeNumeracion(ESistema sistema)
         {
             return new SistemaDecimal(base.valor);
